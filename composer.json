@@ -1,10 +1,15 @@
 {
-  "name": "roots/bedrock",
+  "name": "fuoricentrostudio/appengine-wordpress-stack",
   "type": "project",
   "license": "MIT",
-  "description": "A modern WordPress stack",
+  "description": "A Google Appengine Stack for Wordpress, based on the fantastic Bedrock stack",
   "homepage": "https://roots.io/bedrock/",
   "authors": [
+    {
+      "name": "Brando Meniconi",
+      "email": "b.meniconi@fuoricentrostudio.com",
+      "homepage": "https://github.com/brandomeniconi"
+    },      
     {
       "name": "Scott Walkinshaw",
       "email": "scott.walkinshaw@gmail.com",
@@ -17,10 +22,10 @@
     }
   ],
   "keywords": [
-    "wordpress", "stack", "capistrano", "composer", "vagrant", "wp"
+    "appengine", "wordpress", "stack", "php", "capistrano", "composer", "vagrant", "wp"
   ],
   "support": {
-    "issues": "https://github.com/roots/bedrock/issues",
+    "issues": "https://github.com/appengine-wordpress-stack/",
     "forum": "https://discourse.roots.io/category/bedrock"
   },
   "config": {
@@ -43,7 +48,8 @@
     "php": ">=5.4",
     "composer/installers": "~1.0.12",
     "vlucas/phpdotenv": "~1.0.9",
-    "johnpbloch/wordpress": "4.1.1"
+    "johnpbloch/wordpress": "4.1.1",
+    "wpackagist-plugin/google-app-engine": ">=1.6"
   },
   "extra": {
     "installer-paths": {
