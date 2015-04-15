@@ -11,9 +11,8 @@ Based on Bedrock, a modern WordPress stack that helps you get started with the b
 * [Installation/Usage](#installationusage)
   * [via Composer](#using-create-project)
   * [Manually](#manually)
-* [Deploying](#deploying)
-  * [Steps](#deployment-steps)
-* [Documentation](#deploying-with-capistrano)
+* [Deploys](#deploys)
+* [Documentation](#documentation)
   * [Folder Structure](#folder-structure)
   * [Configuration Files](#configuration-files)
   * [Environment Variables](#environment-variables)
@@ -30,7 +29,6 @@ Or run `composer create-project roots/bedrock <path>` (see [Installation/Usage](
 ## Features
 
 * Dependency management with [Composer](http://getcomposer.org)
-* Automated deployments with [Capistrano](http://www.capistranorb.com/)
 * Better folder structure
 * Environment variables in app.yaml 
 * Autoloader for mu-plugins (let's you use regular plugins as mu-plugins)
@@ -65,7 +63,6 @@ Note: To generate salts without a prompt, run `create-project` with `-n` (non-in
   * `DB_HOST` - Database host
 3. Add theme(s)
 5. Access WP Admin at `https://example.com/wp-admin`
-
 
 ### Manually
 
@@ -115,7 +112,6 @@ The organization of Bedrock is similar to putting WordPress in its own subdirect
 * Capistrano configs are also located in `config/` to make it consistent.
 * `vendor/` is where the Composer managed dependencies are installed to.
 * `wp/` is where the WordPress core lives. It's also managed by Composer but can't be put under `vendor` due to WP limitations.
-
 
 ### Configuration Files
 
@@ -186,36 +182,6 @@ Under most circumstances we recommend NOT doing #2 and instead keeping your main
 
 Just like plugins, WPackagist maintains a Composer mirror of the WP theme directory. To require a theme, just use the `wpackagist-theme` namespace.
 
-### Capistrano
-
-[Capistrano](http://www.capistranorb.com/) is a remote server automation and deployment tool. It will let you deploy or rollback your application in one command:
-
-* Deploy: `cap production deploy`
-* Rollback: `cap production deploy:rollback`
-
-Composer support is built-in so when you run a deploy, `composer install` is automatically run. Capistrano has a great [deploy flow](http://www.capistranorb.com/documentation/getting-started/flow/) that you can hook into and extend it.
-
-It's written in Ruby so it's needed *locally* if you want to use it. Capistrano was recently rewritten to be completely language agnostic, so if you previously wrote it off for being too Rails-centric, take another look at it.
-
-Screencast ($): [Deploying WordPress with Capistrano](https://roots.io/screencasts/deploying-wordpress-with-capistrano/)
-
-#### DB Syncing
-
-Bedrock doesn't come with anything by default to do DB syncing yet. The best option is to use WP-CLI.
-
-[@lavmeiker](https://github.com/lavmeiker) has a nice Capistrano WP-CLI wrapper plugin to make this even easier. [capistrano-wpcli](https://github.com/lavmeiker/capistrano-wpcli) offers the following commands (and more):
-
-* Sync DB: `cap production wpcli:db:push` and `cap production wpcli:db:pull`
-* Sync uploads: `cap production wpcli:uploads:rsync:push` and `cap production wpcli:uploads:rsync:pull`
-
-#### Don't want it?
-
-You will lose the one-command deploys and built-in integration with Composer. Another deploy method will be needed as well.
-
-* Remove `Capfile`, `Gemfile`, and `Gemfile.lock`
-* Remove `config/deploy.rb`
-* Remove `config/deploy/` directory
-
 ### wp-cron
 
 Bedrock disables the internal WP Cron via `define('DISABLE_WP_CRON', true);`. If you keep this setting, you'll need to manually set a cron job like the following in your crontab file:
@@ -238,7 +204,7 @@ Note that using Ansible you no longer need to manually create/edit a `.env` file
 
 Bedrock includes an autoloader that enables standard plugins to be required just like must-use plugins.
 The autoloaded plugins are included after all mu-plugins and standard plugins have been loaded.
-An asterisk (*) next to the name of the plugin designates the plugins that have been autoloaded.
+An asterisk (\*) next to the name of the plugin designates the plugins that have been autoloaded.
 To remove this functionality, just delete `web/app/mu-plugins/bedrock-autoloader.php`.
 
 This enables the use of mu-plugins through Composer if their package type is `wordpress-muplugin`. You can also override a plugin's type like the following example:
