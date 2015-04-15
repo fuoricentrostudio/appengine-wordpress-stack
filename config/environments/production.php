@@ -9,3 +9,10 @@ ini_set('display_errors', 0);
 define('WP_DEBUG_DISPLAY', false);
 define('SCRIPT_DEBUG', false);
 define('DISALLOW_FILE_MODS', true); // this disables all file modifications including updates and update notifications
+
+$batcache = [
+  'seconds'=>0,
+  'max_age'=>30*60, // 30 minutes
+  'group'=>'batcache_'.WP_CACHE_KEY_SALT,
+  'debug'=>false
+];
