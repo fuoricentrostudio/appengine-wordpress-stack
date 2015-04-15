@@ -1,6 +1,6 @@
 application: your-project-id
 module: default
-version: master
+version: dev
 runtime: php55
 api_version: 1
 instance_class: F1
@@ -14,7 +14,7 @@ includes:
   - handlers.yaml
 
 env_variables:
-  DB_NAME: ':/cloudsql/your-project-id:wordpress'
+  DB_NAME: 'localhost'
   DB_USER: 'root'
   DB_PASSWORD: ''
   DB_HOST: 'wordpress_db'
