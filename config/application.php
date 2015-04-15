@@ -5,16 +5,10 @@ $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/web';
 
 /**
- * Set up our global environment constant and load its config first
+ * Set up our global environment constant
  * Default: development
  */
 define('WP_ENV', (isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) ? 'production' : 'development');
-
-$env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
-
-if (file_exists($env_config)) {
-  require_once $env_config;
-}
 
 /**
  * Custom Content Directory
@@ -67,6 +61,15 @@ define('DISALLOW_FILE_EDIT', true);
  define('WP_CACHE', true);
  define('WP_CACHE_KEY_SALT', ModuleService::getCurrentModuleName().'_'.ModuleService::getCurrentVersionName());
 
+/**
+ * Load environment config
+ */
+$env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
+
+if (file_exists($env_config)) {
+  require_once $env_config;
+} 
+ 
 /**
  * Bootstrap WordPress
  */
