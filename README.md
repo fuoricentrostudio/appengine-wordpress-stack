@@ -1,7 +1,7 @@
-# [Bedrock](https://roots.io/bedrock/)
+# [Worpress Stack for Google AppEngine](https://cloud.google.com/)
 [![Build Status](https://travis-ci.org/roots/bedrock.svg)](https://travis-ci.org/roots/bedrock)
 
-Bedrock is a modern WordPress stack that helps you get started with the best development tools and project structure.
+Based on Bedrock, a modern WordPress stack that helps you get started with the best development tools and project structure.
 
 # ToC
 
@@ -11,23 +11,19 @@ Bedrock is a modern WordPress stack that helps you get started with the best dev
 * [Installation/Usage](#installationusage)
   * [via Composer](#using-create-project)
   * [Manually](#manually)
-* [Deploying with Capistrano](#deploying-with-capistrano)
+* [Deploying](#deploying)
   * [Steps](#deployment-steps)
 * [Documentation](#deploying-with-capistrano)
   * [Folder Structure](#folder-structure)
   * [Configuration Files](#configuration-files)
   * [Environment Variables](#environment-variables)
   * [Composer](#composer)
-  * [Capistrano](#capistrano)
   * [WP-CLI](#wp-cli)
-  * [Vagrant/Ansible](#vagrantansible)
   * [mu-plugins Autoloader](#mu-plugins-autoloader)
 * [Contributing](#contributing)
 * [Support](#support)
 
 ## Quick Start
-
-Use [bedrock-ansible](https://github.com/roots/bedrock-ansible) to get started with a development VM customized for Bedrock.
 
 Or run `composer create-project roots/bedrock <path>` (see [Installation/Usage](#installationusage) for more details) to just get a new copy of Bedrock locally.
 
@@ -36,23 +32,18 @@ Or run `composer create-project roots/bedrock <path>` (see [Installation/Usage](
 * Dependency management with [Composer](http://getcomposer.org)
 * Automated deployments with [Capistrano](http://www.capistranorb.com/)
 * Better folder structure
-* Easy WordPress configuration with environment specific files
-* Environment variables with [Dotenv](https://github.com/vlucas/phpdotenv)
-* Easy server environments with [Vagrant](http://www.vagrantup.com/) and [Ansible](http://www.ansible.com/home) - [bedrock-ansible](https://github.com/roots/bedrock-ansible) on GitHub
+* Environment variables in app.yaml 
 * Autoloader for mu-plugins (let's you use regular plugins as mu-plugins)
 
 Bedrock is meant as a base for you to fork and modify to fit your needs. It is delete-key friendly and you can strip out or modify any part of it. You'll also want to customize Bedrock with settings specific to your sites/company.
 
 Much of the philosphy behind Bedrock is inspired by the [Twelve-Factor App](http://12factor.net/) methodology including the [WordPress specific version](https://roots.io/twelve-factor-wordpress/).
 
-Note: While this is a project from the guys behind the [Sage starter theme](https://roots.io/sage/), Bedrock isn't tied to Sage in any way and works with any theme.
+Note: While Bedrock is a project from the guys behind the [Sage starter theme](https://roots.io/sage/), Bedrock isn't tied to Sage in any way and works with any theme.
 
 ## Requirements
 
 * PHP >= 5.4
-* Ruby >= 1.9 (for Capistrano)
-
-If you aren't interested in using a part, then you don't need its requirements either. Not deploying with Capistrano? Then don't worry about Ruby for example.
 
 ## Installation/Usage
 
@@ -66,76 +57,45 @@ The post-install script will automatically copy `.env.example` to `.env` and you
 
 Note: To generate salts without a prompt, run `create-project` with `-n` (non-interactive). You can also change the `generate-salts` setting in `composer.json` under `config` in your own fork. The default is `true`.
 
-1. Run `composer create-project roots/bedrock <path>` (`path` being the folder to install to)
-2. Edit `.env` and update environment variables:
+1. Run `composer create-project fuoricentrostudio/appengine-wordpress-stack <path>` (`path` being the folder to install to)
+2. Edit `app.yaml` and update environment variables:
   * `DB_NAME` - Database name
   * `DB_USER` - Database user
   * `DB_PASSWORD` - Database password
-  * `DB_HOST` - Database host (defaults to `localhost`)
-  * `WP_ENV` - Set to environment (`development`, `staging`, `production`, etc)
-  * `WP_HOME` - Full URL to WordPress home (http://example.com)
-  * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
+  * `DB_HOST` - Database host
 3. Add theme(s)
-4. Set your Nginx or Apache vhost to `/path/to/site/web/` (`/path/to/site/current/web/` if using Capistrano)
-5. Access WP Admin at `http://example.com/wp/wp-admin`
+5. Access WP Admin at `https://example.com/wp-admin`
 
 
 ### Manually
 
 1. Clone/Fork repo
 2. Run `composer install`
-3. Copy `.env.example` to `.env` and update environment variables:
+2. Edit `app.yaml` and update environment variables:
   * `DB_NAME` - Database name
   * `DB_USER` - Database user
   * `DB_PASSWORD` - Database password
-  * `DB_HOST` - Database host (defaults to `localhost`)
-  * `WP_ENV` - Set to environment (`development`, `staging`, `production`, etc)
-  * `WP_HOME` - Full URL to WordPress home (http://example.com)
-  * `WP_SITEURL` - Full URL to WordPress including subdirectory (http://example.com/wp)
+  * `DB_HOST` - Database host
 4. Add theme(s)
-4. Set your Nginx or Apache vhost to `/path/to/site/web/` (`/path/to/site/current/web/` if using Capistrano)
-5. Access WP Admin at `http://example.com/wp/wp-admin`
+5. Access WP Admin at `https://example.com/wp-admin`
 
 
-### Deploying with Capistrano
+### Deploying with AppEngine
 
-Required Gems:
-
-* `capistrano` (> 3.1.0)
-* `capistrano-composer`
-
-These can be installed manually with `gem install <gem name>` but it's highly suggested you use [Bundler](http://bundler.io/) to manage them. Bundler is basically the Ruby equivalent to PHP's Composer. Just as Composer manages your PHP packages/dependencies, Bundler manages your Ruby gems/dependencies. Bundler itself is a Gem and can be installed via `gem install bundler` (sudo may be required).
-
-The `Gemfile` in the root of this repo specifies the required Gems (just like `composer.json`). Once you have Bundler installed, run `bundle install` to install the Gems in the `Gemfile`. When using Bundler, you'll need to prefix the `cap` command with `bundle exec` as seen below (this ensures you're not using system Gems which can cause conflicts).
-
-See http://capistranorb.com/documentation/getting-started/authentication-and-authorisation/ for the best way to set up SSH key authentication to your servers for password-less (and secure) deploys.
-
-### Deployment Steps
-
-1. Edit your `config/deploy/` stage/environment configs to set the roles/servers and connection options.
-2. Before your first deploy, run `bundle exec cap <stage> deploy:check` to create the necessary folders/symlinks.
-3. Add your `.env` file to `shared/` in your `deploy_to` path on the remote server for all the stages you use (ex: `/srv/www/example.com/shared/.env`)
-4. Run the normal deploy command: `bundle exec cap <stage> deploy`
-5. Enjoy one-command deploys!
+See Wordpress Starter Project [Documentation on Deplyments] (https://github.com/fuoricentrostudio/appengine-php-wordpress-starter-project#deploy)
 
 ## Documentation
 
 ### Folder Structure
 
 ```
-├── Capfile
 ├── composer.json
 ├── config
 │   ├── application.php
-│   ├── deploy
-│   │   ├── staging.rb
-│   │   └── production.rb
-│   ├── deploy.rb
 │   └── environments
 │       ├── development.php
 │       ├── staging.php
 │       └── production.php
-├── Gemfile
 ├── vendor
 └── web
     ├── app
@@ -174,10 +134,6 @@ Note: You can't re-define constants in PHP. So if you have a base setting in `ap
 
 ### Environment Variables
 
-Bedrock tries to separate config from code as much as possible and environment variables are used to achieve this. The benefit is there's a single place (`.env`) to keep settings like database or other 3rd party credentials that isn't committed to your repository.
-
-[PHP dotenv](https://github.com/vlucas/phpdotenv) is used to load the `.env` file. All variables are then available in your app by `getenv`, `$_SERVER`, or `$_ENV`.
-
 Currently, the following env vars are required:
 
 * `DB_USER`
@@ -185,14 +141,6 @@ Currently, the following env vars are required:
 * `DB_PASSWORD`
 * `WP_HOME`
 * `WP_SITEURL`
-
-#### Don't want it?
-
-You will lose the separation between config and code and potentially put secure credentials at risk.
-
-* Remove `dotenv` from `composer.json` requires
-* Remove `.env.example` file from root
-* Replace all `getenv` calls with whatever method you want to set those values
 
 ### Composer
 
