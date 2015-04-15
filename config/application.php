@@ -1,4 +1,6 @@
 <?php
+use \google\appengine\api\modules\ModulesService as ModuleService;
+
 $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/web';
 
@@ -58,6 +60,12 @@ define('NONCE_SALT', getenv('NONCE_SALT'));
 define('AUTOMATIC_UPDATER_DISABLED', true);
 define('DISABLE_WP_CRON', true);
 define('DISALLOW_FILE_EDIT', true);
+
+/**
+ *  Cache
+ */
+ define('WP_CACHE', true);
+ define('WP_CACHE_KEY_SALT', ModuleService::getCurrentModuleName().'_'.ModuleService::getCurrentVersionName());
 
 /**
  * Bootstrap WordPress
