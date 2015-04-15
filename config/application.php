@@ -3,19 +3,10 @@ $root_dir = dirname(__DIR__);
 $webroot_dir = $root_dir . '/web';
 
 /**
- * Use Dotenv to set required environment variables and load .env file in root
- */
-if (file_exists($root_dir . '/.env')) {
-  Dotenv::load($root_dir);
-}
-
-Dotenv::required(array('DB_NAME', 'DB_USER', 'DB_PASSWORD', 'WP_HOME', 'WP_SITEURL'));
-
-/**
  * Set up our global environment constant and load its config first
  * Default: development
  */
-define('WP_ENV', getenv('WP_ENV') ? getenv('WP_ENV') : 'development');
+define('WP_ENV', (isset($_SERVER['SERVER_SOFTWARE']) && strpos($_SERVER['SERVER_SOFTWARE'],'Google App Engine') !== false) ? 'production' : 'development');
 
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';
 
@@ -29,6 +20,18 @@ if (file_exists($env_config)) {
 define('CONTENT_DIR', '/app');
 define('WP_CONTENT_DIR', $webroot_dir . CONTENT_DIR);
 define('WP_CONTENT_URL', WP_HOME . CONTENT_DIR);
+
+/**
+ * Determine HTTP or HTTPS, then set WP_SITEURL and WP_HOME
+ */
+if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER_PORT'] == 443)
+{
+    $protocol_to_use = 'https://';
+} else {
+    $protocol_to_use = 'http://';
+}
+define( 'WP_SITEURL', $protocol_to_use . $_SERVER['HTTP_HOST']);
+define( 'WP_HOME', $protocol_to_use . $_SERVER['HTTP_HOST']);
 
 /**
  * DB settings

@@ -47,7 +47,6 @@
   "require": {
     "php": ">=5.4",
     "composer/installers": "~1.0.12",
-    "vlucas/phpdotenv": "~1.0.9",
     "johnpbloch/wordpress": "4.1.1",
     "wpackagist-plugin/google-app-engine": ">=1.6"
   },

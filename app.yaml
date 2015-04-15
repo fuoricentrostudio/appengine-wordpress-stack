@@ -1,5 +1,5 @@
 application: your-project-id
-version: wpfromstarterproject
+version: gaestack
 runtime: php
 api_version: 1
 
@@ -49,8 +49,20 @@ handlers:
 - url: /(.+)?/?
   script: web/wp/index.php
 
+env_variables:
+  DB_NAME: ':/cloudsql/your-project-id:wordpress'
+  DB_USER: 'root'
+  DB_PASSWORD: ''
+  DB_HOST: 'wordpress_db'
+  AUTH_KEY: 'put your unique phrase here'
+  SECURE_AUTH_KEY: 'put your unique phrase here'
+  LOGGED_IN_KEY: 'put your unique phrase here'
+  NONCE_KEY: 'put your unique phrase here'
+  AUTH_SALT: 'put your unique phrase here'
+  SECURE_AUTH_SALT: 'put your unique phrase here'
+  LOGGED_IN_SALT: 'put your unique phrase here'
+  NONCE_SALT: 'put your unique phrase here'  
+
 skip_files:
-- ^(.*/)?\.zip$
-- ^(.*/)?\.bat$
-- ^(.*/)?\.sh$
+- ^(.*/)?\..*$
 - ^(.*/)?\.md$
