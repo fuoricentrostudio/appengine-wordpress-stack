@@ -22,7 +22,7 @@
     }
   ],
   "keywords": [
-    "appengine", "wordpress", "stack", "php", "capistrano", "composer", "vagrant", "wp"
+    "appengine", "wordpress", "stack", "php", "capistrano", "composer", "vagrant", "wp", "bedrock", "roots"
   ],
   "support": {
     "issues": "https://github.com/appengine-wordpress-stack/",
