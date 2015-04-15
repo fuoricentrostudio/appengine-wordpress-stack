@@ -9,15 +9,51 @@ handlers:
   upload: web/wp/wp-content/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
   application_readable: true
 
-- url: /(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
+- url: /(.*\.(ico|jpg|jpeg|png|gif|svg))$
   static_files: web/wp/\1
-  upload: web/wp/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+  upload: web/wp/.*\.(ico|jpg|jpeg|png|gif|svg)$
   application_readable: true
 
-- url: /wp-includes/images/media/(.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg))$
+- url: /wp-includes/images/media/(.*\.(ico|jpg|jpeg|png|gif|svg))$
   static_files: web/wp/wp-includes/images/media/\1
-  upload: web/wp/wp-includes/images/media/.*\.(ico|jpg|jpeg|png|gif|woff|ttf|otf|eot|svg)$
+  upload: web/wp/wp-includes/images/media/.*\.(ico|jpg|jpeg|png|gif|svg)$
   application_readable: true
+
+- url: /wp-includes/images/media/(.*\.(woff))$
+  mime_type: application/font-woff
+  static_files: web/wp/wp-includes/images/media/\1
+  upload: web/wp/wp-includes/images/media/.*\.(woff)$
+  application_readable: true
+  
+- url: /wp-includes/images/media/(.*\.(ttf|otf))$
+  mime_type: application/font-sfnt
+  static_files: web/wp/wp-includes/images/media/\1
+  upload: web/wp/wp-includes/images/media/.*\.(ttf|otf)$
+  application_readable: true
+  
+- url: /wp-includes/images/media/(.*\.(eot))$
+  mime_type: application/vnd.ms-fontobject 
+  static_files: web/wp/wp-includes/images/media/\1
+  upload: web/wp/wp-includes/images/media/.*\.(eot)$
+  application_readable: true  
+  
+- url: /wp-content/(.*\.(woff))$
+  mime_type: application/font-woff
+  static_files: web/wp/wp-content/\1
+  upload: web/wp/wp-content/.*\.(woff)$
+  application_readable: true
+  
+- url: /wp-content/(.*\.(ttf|otf))$
+  mime_type: application/font-sfnt
+  static_files: web/wp/wp-content/\1
+  upload: web/wp/wp-content/.*\.(ttf|otf)$
+  application_readable: true
+  
+- url: /wp-content/(.*\.(eot))$
+  mime_type: application/vnd.ms-fontobject 
+  static_files: web/wp/wp-content/\1
+  upload: web/wp/wp-content/.*\.(eot)$
+  application_readable: true    
 
 - url: /wp-admin/(.+)
   script: web/wp/wp-admin/\1
