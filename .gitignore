@@ -18,11 +18,6 @@ web/.htaccess
 db-sync
 sql-dump-*.sql
 
-# Dotenv
-.env
-.env.*
-!.env.example
-
 # Vendor (e.g. Composer)
 vendor/*
 !vendor/.gitkeep
@@ -30,6 +25,5 @@ vendor/*
 # Node Package Manager
 node_modules
 
-# Vagrant
-bin
-.vagrant
+# Composer
+composer.lock
