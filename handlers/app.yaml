@@ -1,0 +1,20 @@
+handlers:    
+- url: /(.*\.(woff))$
+  mime_type: application/font-woff
+  static_files: web/\1
+  upload: web/.*\.(woff)$
+  
+- url: /(.*\.(ttf|otf))$
+  mime_type: application/font-sfnt
+  static_files: web/\1
+  upload: web/.*\.(ttf|otf)$
+  
+- url: /(.*\.(eot))$
+  mime_type: application/vnd.ms-fontobject 
+  static_files: web/\1
+  upload: web/.*\.(eot)$  
+
+- url: /(.*\.(js\.map))$
+  mime_type: application/json 
+  static_files: web/\1
+  upload: web/.*\.(js\.map)$

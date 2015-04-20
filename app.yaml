@@ -11,13 +11,14 @@ automatic_scaling:
   max_pending_latency: 30ms
 
 includes:
-  - handlers.yaml
+  - handlers/app.yaml
+  - handlers/core.yaml
 
 env_variables:
-  DB_NAME: ':/cloudsql/your-project-id:wordpress'
+  DB_HOST: ':/cloudsql/your-project-id:wordpress'
   DB_USER: 'root'
   DB_PASSWORD: ''
-  DB_HOST: 'wordpress_db'
+  DB_NAME: 'wordpress_db'
   AUTH_KEY: 'put your unique phrase here'
   SECURE_AUTH_KEY: 'put your unique phrase here'
   LOGGED_IN_KEY: 'put your unique phrase here'
