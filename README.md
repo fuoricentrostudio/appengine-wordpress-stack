@@ -1,5 +1,5 @@
-# [Worpress Stack for Google AppEngine](https://cloud.google.com/)
-[![Build Status](https://travis-ci.org/roots/bedrock.svg)](https://travis-ci.org/roots/bedrock)
+# [Wordpress Stack for Google Cloud PHP AppEngine](https://cloud.google.com/)
+## Beta
 
 Based on Bedrock, a modern WordPress stack that helps you get started with the best development tools and project structure.
 
