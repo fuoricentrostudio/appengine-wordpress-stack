@@ -12,7 +12,7 @@ automatic_scaling:
 
 includes:
   - handlers/app.yaml
-  - handlers/core.yaml
+  - handlers/wp.yaml
 
 env_variables:
   DB_HOST: ':/cloudsql/your-project-id:wordpress'
