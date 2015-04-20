@@ -19,6 +19,10 @@ if (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' || $_SERVER['SERVER
 } else {
     $protocol_to_use = 'http://';
 }
+
+/**
+ * URLs
+ */
 define( 'WP_SITEURL', $protocol_to_use . $_SERVER['HTTP_HOST']);
 define( 'WP_HOME', $protocol_to_use . $_SERVER['HTTP_HOST']);
 
