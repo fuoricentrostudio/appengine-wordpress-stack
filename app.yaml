@@ -1,6 +1,6 @@
-application: your-project-id
+application: piana-notizie
 module: default
-version: master
+version: 2014
 runtime: php55
 api_version: 1
 instance_class: F1
@@ -15,18 +15,18 @@ includes:
   - handlers/wp.yaml
 
 env_variables:
-  DB_HOST: ':/cloudsql/your-project-id:wordpress'
+  DB_HOST: ':/cloudsql/piana-notizie:wp'
   DB_USER: 'root'
   DB_PASSWORD: ''
-  DB_NAME: 'wordpress_db'
-  AUTH_KEY: 'put your unique phrase here'
-  SECURE_AUTH_KEY: 'put your unique phrase here'
-  LOGGED_IN_KEY: 'put your unique phrase here'
-  NONCE_KEY: 'put your unique phrase here'
-  AUTH_SALT: 'put your unique phrase here'
-  SECURE_AUTH_SALT: 'put your unique phrase here'
-  LOGGED_IN_SALT: 'put your unique phrase here'
-  NONCE_SALT: 'put your unique phrase here'  
+  DB_NAME: 'piananotizie_2014'
+  AUTH_KEY: 'qt;yl+nA~s1.A%jcxZ3E0{]3*j.wxag%!v+b`Zv].WZO6& ~P<2{os*`@%-edv$%'
+  SECURE_AUTH_KEY: '-%P4c-C+L|+p;Kg<cuU;~h#QJ(@A*>v2o0YbFd.+)I}?4T80Q93Ka{u-WGEs&zlk'
+  LOGGED_IN_KEY: 'n,v;Cy;N;x#rUh.Nc|7WdK!NW[]cPw]%sR;BjSD%++Z6z}p+b5))<|MiXm. aCwi'
+  NONCE_KEY: 'd3~9k]n;q2EYSvjg!K0PUxdW&2TEg0]G6N]y+z=PN]%^.hOr+dy:fF0+-5G!R/=('
+  AUTH_SALT: 'K$Hm;MM}--i>U;.k#/]+g=65^E[)a)q0GH4(7wRu][vb2$dMWsfYM*i@q?l6[Djv'
+  SECURE_AUTH_SALT: 'w@xT%xqR~sR`h&;d?7.2@ocb;fvX#4cHs59m#,8%{K_f=$,Aap^*Hd5[>-^Omcg7'
+  LOGGED_IN_SALT: '5vjc|M_-wura*tDfrZmItdfev}v{-^0~x%$j@rA/ lvimiP;w*#=I`bD|{DV7j{~'
+  NONCE_SALT: '}kc}3|/r&tX1pBW)-czQ;fj5-[+pE+tifH6 EfPDL@[Sc87=W0]h|JpDc%sL{?%2'  
 
 skip_files:
 - ^(.*/)?\..*$
