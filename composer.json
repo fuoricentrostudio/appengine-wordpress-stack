@@ -1,33 +1,18 @@
 {
-  "name": "fuoricentrostudio/appengine-wordpress-stack",
+  "name": "fuoricentrostudio/piananotizie2014",
   "type": "project",
   "license": "MIT",
-  "description": "A Google Appengine Stack for Wordpress, based on the fantastic Bedrock stack",
-  "homepage": "https://roots.io/bedrock/",
+  "homepage": "https://www.piananotizie.it/",
   "authors": [
     {
       "name": "Brando Meniconi",
       "email": "b.meniconi@fuoricentrostudio.com",
       "homepage": "https://github.com/brandomeniconi"
-    },      
-    {
-      "name": "Scott Walkinshaw",
-      "email": "scott.walkinshaw@gmail.com",
-      "homepage": "https://github.com/swalkinshaw"
-    },
-    {
-      "name": "Ben Word",
-      "email": "ben@benword.com",
-      "homepage": "https://github.com/retlehs"
     }
   ],
   "keywords": [
-    "appengine", "wordpress", "stack", "php", "capistrano", "composer", "vagrant", "wp", "bedrock", "roots"
+    "appengine", "wordpress", "stack", "php", "composer",  "wp", "bedrock", "roots"
   ],
-  "support": {
-    "issues": "https://github.com/appengine-wordpress-stack/",
-    "forum": "https://discourse.roots.io/category/bedrock"
-  },
   "config": {
     "preferred-install": "dist",
     "generate-salts": true
