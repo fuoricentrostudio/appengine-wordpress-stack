@@ -21,7 +21,8 @@
     "psr-0": {"Roots\\Bedrock\\Installer": "scripts"}
   },
   "scripts": {
-    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"]
+    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"],
+    "deploy":"appcfg.py --oauth2 update ."
   },
   "repositories": [
     {
@@ -36,7 +37,7 @@
   "require": {
     "php": ">=5.4",
     "composer/installers": "~1.0.12",
-    "johnpbloch/wordpress": "4.2.1",
+    "johnpbloch/wordpress": "4.2.2",
     "wpackagist-plugin/google-app-engine": ">=1.6",
     "wpackagist-plugin/batcache": "*",
     "wpackagist-plugin/advanced-custom-fields": "*",
