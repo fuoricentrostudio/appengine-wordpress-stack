@@ -36,7 +36,8 @@
     "psr-0": {"Roots\\Bedrock\\Installer": "scripts"}
   },
   "scripts": {
-    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"]
+    "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"],
+    "deploy":"appcfg.py --oauth2 update ."
   },
   "repositories": [
     {
