@@ -1,5 +1,5 @@
 {
-  "name": "fuoricentrostudio/piananotizie2014",
+  "name": "fuoricentrostudio/piananotizie",
   "type": "project",
   "license": "MIT",
   "homepage": "https://www.piananotizie.it/",
@@ -25,6 +25,10 @@
   },
   "repositories": [
     {
+        "type": "vcs",
+        "url":  "git@bitbucket.org:fuoricentrostudio/piananotizie2014.git"
+    },      
+    {
       "type": "composer",
       "url": "http://wpackagist.org"
     }
@@ -34,7 +38,10 @@
     "composer/installers": "~1.0.12",
     "johnpbloch/wordpress": "4.2.1",
     "wpackagist-plugin/google-app-engine": ">=1.6",
-    "wpackagist-plugin/batcache": "*"
+    "wpackagist-plugin/batcache": "*",
+    "wpackagist-plugin/advanced-custom-fields": "*",
+    "wpackagist-plugin/all-in-one-seo-pack": "*",
+    "fuoricentrostudio/piananotizie2014": "dev-master"
   },
   "extra": {
     "installer-paths": {
