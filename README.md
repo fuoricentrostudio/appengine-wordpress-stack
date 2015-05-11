@@ -17,6 +17,7 @@ Bedrock is meant as a base for you to fork and modify to fit your needs. It is d
 ## Requirements
 
 * PHP >= 5.4
+* Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
 ## Installation
 
