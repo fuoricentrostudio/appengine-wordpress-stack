@@ -7,8 +7,8 @@ Much of the philosophy behind Bedrock is inspired by the [Twelve-Factor App](htt
 
 ## Features
 
-* Dependency management with [Composer](http://getcomposer.org)
 * Better folder structure
+* Dependency management with [Composer](http://getcomposer.org)
 * Easy WordPress configuration with environment variables in app.yaml 
 * Autoloader for mu-plugins (let's you use regular plugins as mu-plugins)
 
@@ -17,6 +17,7 @@ Bedrock is meant as a base for you to fork and modify to fit your needs. It is d
 ## Requirements
 
 * PHP >= 5.4
+* Composer - [Install](https://getcomposer.org/doc/00-intro.md#installation-linux-unix-osx)
 
 ## Installation
 
