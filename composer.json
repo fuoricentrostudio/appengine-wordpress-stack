@@ -44,7 +44,11 @@
     {
       "type": "composer",
       "url": "http://wpackagist.org"
-    }
+    },
+    {
+        "type": "composer",
+        "url": "http://languages.koodimonni.fi"
+    }     
   ],
   "require": {
     "php": ">=5.4",
@@ -65,7 +69,12 @@
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "wpackagist-plugin/advanced-custom-fields"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
-    },       
-    "wordpress-install-dir": "web/wp"
+    },
+    "wordpress-install-dir": "web/wp",
+    "dropin-paths": {
+      "web/app/languages/": ["vendor:koodimonni-language"],
+      "web/app/languages/plugins/": ["vendor:koodimonni-plugin-language"],
+      "web/app/languages/themes/": ["vendor:koodimonni-theme-language"]
+    }     
   }
 }
