@@ -22,7 +22,7 @@
   },
   "scripts": {
     "post-root-package-install": ["Roots\\Bedrock\\Installer::addSalts"],
-    "deploy":"appcfg.py --oauth2 update ."
+    "deploy":"appcfg.py update ."
   },
   "repositories": [
     {
