@@ -42,6 +42,14 @@
         "url":  "git@bitbucket.org:fuoricentrostudio/wp-biometeo.git"
     },      
     {
+        "type": "vcs",
+        "url":  "git@bitbucket.org:fuoricentrostudio/wp-instagram.git"
+    },      
+    {
+        "type": "vcs",
+        "url":  "git@github.com:fuoricentrostudio/Instagram-WP-API.git"
+    },
+    {
       "type": "composer",
       "url": "http://wpackagist.org"
     },
@@ -62,6 +70,7 @@
     "fuoricentrostudio/wp-adaptive-banners": "dev-master",
     "fuoricentrostudio/wp-cookiepolicy": "dev-master",
     "fuoricentrostudio/wp-biometeo": "dev-master",
+    "fuoricentrostudio/wp-instagram": "dev-master",
     "koodimonni-language/core-it_it": "*"
   },
   "extra": {
