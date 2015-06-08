@@ -25,31 +25,15 @@
     "deploy":"appcfg.py update ."
   },
   "repositories": [
-    {
-        "type": "vcs",
-        "url":  "git@bitbucket.org:fuoricentrostudio/piananotizie2014.git"
-    },      
-    {
-        "type": "vcs",
-        "url":  "git@bitbucket.org:fuoricentrostudio/wp-adaptive-banners.git"
-    },      
-    {
-        "type": "vcs",
-        "url":  "git@bitbucket.org:fuoricentrostudio/wp-cookiepolicy.git"
-    },  
-    {
-        "type": "vcs",
-        "url":  "git@bitbucket.org:fuoricentrostudio/wp-biometeo.git"
-    },      
-    {
-        "type": "vcs",
-        "url":  "git@bitbucket.org:fuoricentrostudio/wp-instagram.git"
-    },      
-    {
-        "type": "vcs",
-        "url":  "git@github.com:fuoricentrostudio/Instagram-WP-API.git"
-    },
-    {
+    {  "type": "vcs", "url":  "git@bitbucket.org:fuoricentrostudio/piananotizie2014.git" },      
+    {  "type": "vcs", "url":  "git@bitbucket.org:fuoricentrostudio/wp-adaptive-banners.git"},      
+    {  "type": "vcs", "url":  "git@bitbucket.org:fuoricentrostudio/wp-cookiepolicy.git" },  
+    {  "type": "vcs", "url":  "git@bitbucket.org:fuoricentrostudio/wp-biometeo.git" },      
+    {  "type": "vcs", "url":  "git@bitbucket.org:fuoricentrostudio/wp-instagram.git" },      
+    {  "type": "vcs", "url":  "git@github.com:fuoricentrostudio/Instagram-WP-API.git"},   
+    {  "type": "vcs", "url":  "git@bitbucket.org:fuoricentrostudio/wp-socialsidebar.git"},   
+    {  "type": "vcs", "url":  "git@bitbucket.org:fuoricentrostudio/xmlrpc-sync.git"},   
+    {  
       "type": "composer",
       "url": "http://wpackagist.org"
     },
@@ -71,11 +55,17 @@
     "fuoricentrostudio/wp-cookiepolicy": "dev-master",
     "fuoricentrostudio/wp-biometeo": "dev-master",
     "fuoricentrostudio/wp-instagram": "dev-master",
+    "fuoricentrostudio/wp-socialsidebar": "dev-master",
+    "fuoricentrostudio/xmlrpc-sync": "dev-master",
     "koodimonni-language/core-it_it": "*"
   },
   "extra": {
     "installer-paths": {
-      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin", "wpackagist-plugin/advanced-custom-fields"],
+      "web/app/mu-plugins/{$name}/": [ 
+          "type:wordpress-muplugin", 
+          "wpackagist-plugin/advanced-custom-fields", 
+          "wpackagist-plugin/google-app-engine"
+          ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
