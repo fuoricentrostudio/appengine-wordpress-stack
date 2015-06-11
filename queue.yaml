@@ -1,0 +1,22 @@
+queue:
+- name: importposts
+  rate: 0.5/s
+  max_concurrent_requests: 2
+  retry_parameters:
+    task_age_limit: 10d
+    min_backoff_seconds: 10
+    max_backoff_seconds: 600
+- name: importcomments
+  rate: 0.5/s
+  max_concurrent_requests: 1
+  retry_parameters:
+    task_age_limit: 10d
+    min_backoff_seconds: 10
+    max_backoff_seconds: 600        
+- name: importattachments
+  rate: 3/s
+  max_concurrent_requests: 10
+  retry_parameters:
+    task_age_limit: 10d
+    min_backoff_seconds: 10
+    max_backoff_seconds: 600    

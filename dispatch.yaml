@@ -1,0 +1,9 @@
+dispatch:       
+  - url: "piananotizie-eu.appspot.com/wp-admin/admin-ajax.php"
+    module: default 
+
+  - url: "piananotizie-eu.appspot.com/wp-login.php*"
+    module: backend
+    
+  - url: "piananotizie-eu.appspot.com/wp-admin/*"
+    module: backend
