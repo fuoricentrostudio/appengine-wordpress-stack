@@ -27,3 +27,4 @@ node_modules
 
 # Composer
 composer.lock
+/nbproject
