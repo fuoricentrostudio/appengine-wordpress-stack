@@ -64,7 +64,7 @@ define('FORCE_SSL_ADMIN', true );
  *  Cache
  */
  define('WP_CACHE', true);
- define('WP_CACHE_KEY_SALT', ModuleService::getCurrentModuleName().'_'.ModuleService::getCurrentVersionName());
+ //define('WP_CACHE_KEY_SALT', ModuleService::getCurrentModuleName().'_'.ModuleService::getCurrentVersionName());
 
 /**
  * Load environment config

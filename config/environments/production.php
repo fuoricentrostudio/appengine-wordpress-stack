@@ -13,6 +13,6 @@ define('DISALLOW_FILE_MODS', true); // this disables all file modifications incl
 $batcache = [
   'seconds'=>0,
   'max_age'=>30*60, // 30 minutes
-  'group'=>'batcache_'.WP_CACHE_KEY_SALT,
+  'group'=>'batcache_'. ( defined(WP_CACHE_KEY_SALT) ? WP_CACHE_KEY_SALT : '' ),
   'debug'=>false
 ];
