@@ -44,6 +44,7 @@
     "wpackagist-plugin/google-app-engine": ">=1.6",
     "wpackagist-plugin/batcache": "*",
     "wpackagist-plugin/advanced-custom-fields": ">=4.4.2",
+    "wpackagist-plugin/really-simple-captcha": ">=1.8.0.1",
     "fuoricentrostudio/piananotizie2014": "dev-master",
     "fuoricentrostudio/wp-adaptive-banners": "dev-master",
     "fuoricentrostudio/wp-cookiepolicy": "dev-master",
