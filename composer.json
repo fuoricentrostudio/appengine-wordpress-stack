@@ -17,7 +17,7 @@
     "preferred-install": "dist"
   },
   "scripts": {
-    "deploy":"appcfg.py update ."
+    "deploy":"appcfg.py update . && appcfg.py update ./backend.yaml"
   },
   "repositories": [
     {  "type": "vcs", "url":  "git@bitbucket.org:fuoricentrostudio/piananotizie2014.git" },      
@@ -44,7 +44,6 @@
     "wpackagist-plugin/google-app-engine": ">=1.6",
     "wpackagist-plugin/batcache": "*",
     "wpackagist-plugin/advanced-custom-fields": ">=4.4.2",
-    "wpackagist-plugin/all-in-one-seo-pack": "*",
     "fuoricentrostudio/piananotizie2014": "dev-master",
     "fuoricentrostudio/wp-adaptive-banners": "dev-master",
     "fuoricentrostudio/wp-cookiepolicy": "dev-master",
