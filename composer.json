@@ -45,6 +45,7 @@
     "wpackagist-plugin/batcache": "*",
     "wpackagist-plugin/advanced-custom-fields": ">=4.4.2",
     "wpackagist-plugin/really-simple-captcha": ">=1.8.0.1",
+    "wpackagist-plugin/wordpress-seo": ">=2.2.1",
     "fuoricentrostudio/piananotizie2014": "dev-master",
     "fuoricentrostudio/wp-adaptive-banners": "dev-master",
     "fuoricentrostudio/wp-cookiepolicy": "dev-master",
