@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /wp-include/
+Disallow: /?attachment_id=*
+Disallow: /wp-admin/
+Disallow: /tags/
+Disallow: /category/
+
+Sitemap: http://www.piananotizie.it/sitemap_index.xml
+Host: www.piananotizie.it
