@@ -1,4 +1,11 @@
 handlers:
+- url: /wp-content/uploads/(.*\.(js|css|htm|html|map|ico|jpg|jpeg|png|gif|svg))$
+  script: web/media.php
+  
+- url: /robots.txt
+  static_files: web/robots.txt
+  upload: web/robots.txt 
+    
 - url: /wp-(.+)/(.*\.(js|css|htm|html|map|ico|jpg|jpeg|png|gif|svg))$
   static_files: web/wp/wp-\1/\2
   upload: web/wp/wp-(.+)/.*\.(js|css|htm|html|map|ico|jpg|jpeg|png|gif|svg)$
@@ -11,15 +18,12 @@ handlers:
 
 - url: /wp-admin/(.+)
   script: web/wp/wp-admin/\1
-  secure: always
 
 - url: /wp-admin/
   script: web/wp/wp-admin/index.php
-  secure: always
 
 - url: /wp-login.php
   script: web/wp/wp-login.php
-  secure: always
 
 - url: /wp-cron.php
   script: web/wp/wp-cron.php
@@ -32,4 +36,4 @@ handlers:
   script: web/wp/wp-\1.php
 
 - url: /(.+)?/?
-  script: web/wp/index.php
+  script: web/index.php
