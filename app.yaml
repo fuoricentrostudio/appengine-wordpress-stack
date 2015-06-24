@@ -8,7 +8,7 @@ automatic_scaling:
   min_idle_instances: 0
   max_idle_instances: automatic
   min_pending_latency: automatic
-  max_pending_latency: 30ms
+  max_pending_latency: automatic
 
 includes:
   - handlers/app.yaml
