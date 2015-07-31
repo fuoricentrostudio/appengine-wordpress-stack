@@ -1,7 +1,7 @@
 User-agent: *
-Disallow: /wp-include/
 Disallow: /?attachment_id=*
 Disallow: /wp-admin/
+Disallow: /wp-login.php
 Disallow: /tag/
 Disallow: /category/
 

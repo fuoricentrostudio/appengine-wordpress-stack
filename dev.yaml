@@ -1,12 +1,15 @@
 application: piananotizie-eu
-module: backend
-version: 2015
+module: default
+version: dev
 runtime: php55
 api_version: 1
-instance_class: B1
-basic_scaling:
-  max_instances: 3
-  idle_timeout: 10m
+instance_class: F1
+threadsafe: true
+automatic_scaling:
+  min_idle_instances: 0
+  max_idle_instances: 1
+  min_pending_latency: automatic
+  max_pending_latency: automatic
 
 includes:
   - handlers/app.yaml

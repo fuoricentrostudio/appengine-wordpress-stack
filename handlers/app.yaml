@@ -1,4 +1,4 @@
-handlers:    
+handlers:       
 - url: /(.*\.(woff))$
   mime_type: application/font-woff
   static_files: web/\1

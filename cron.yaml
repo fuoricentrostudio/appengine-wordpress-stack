@@ -1,8 +1,4 @@
 cron:
 - description: wordpress cron tasks
   url: /wp-cron.php
-  schedule: every 15 minutes
-  
-- description: wordpress home refresh
-  url: /
-  schedule: every 15 minutes  
+  schedule: every 1 hours

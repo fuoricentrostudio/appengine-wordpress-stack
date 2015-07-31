@@ -4,11 +4,14 @@ version: 2015
 runtime: php55
 api_version: 1
 instance_class: F1
+threadsafe: true
 automatic_scaling:
   min_idle_instances: 0
-  max_idle_instances: automatic
+  max_idle_instances: 1
   min_pending_latency: automatic
   max_pending_latency: automatic
+
+default_expiration: "1d 1h"
 
 includes:
   - handlers/app.yaml

@@ -1,6 +1,9 @@
 handlers:
 - url: /wp-content/uploads/(.*\.(js|css|htm|html|map|ico|jpg|jpeg|png|gif|svg))$
-  script: web/media.php
+  script: web/static.php
+  
+- url: /(android-icon|apple-icon|ms-icon|favicon).*
+  script: web/static.php  
   
 - url: /robots.txt
   static_files: web/robots.txt
@@ -34,6 +37,12 @@ handlers:
 
 - url: /wp-(.+).php
   script: web/wp/wp-\1.php
+
+- url: /_ah/start
+  script: web/stopstart.php
+  
+- url: /_ah/stop
+  script: web/stopstart.php
 
 - url: /(.+)?/?
   script: web/index.php
