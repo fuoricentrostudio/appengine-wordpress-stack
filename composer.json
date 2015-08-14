@@ -41,6 +41,7 @@
     "php": ">=5.4",
     "composer/installers": "~1.0.12",
     "johnpbloch/wordpress": "~4.2.2",
+    "koodimonni/composer-dropin-installer": "*",
     "wpackagist-plugin/google-app-engine": ">=1.6",
     "wpackagist-plugin/batcache": ">=1.2",
     "wpackagist-plugin/advanced-custom-fields": ">=4.4.2",
@@ -65,7 +66,7 @@
           "type:wordpress-muplugin", 
           "wpackagist-plugin/advanced-custom-fields", 
           "wpackagist-plugin/google-app-engine"
-          ],
+      ],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
     },
