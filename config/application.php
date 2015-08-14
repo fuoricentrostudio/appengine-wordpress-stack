@@ -62,12 +62,6 @@ define( 'DISALLOW_FILE_MODS', true );
 //define('FORCE_SSL_ADMIN', true );
 
 /**
- *  Cache
- */
- define('WP_CACHE', true);
- //define('WP_CACHE_KEY_SALT', ModuleService::getCurrentModuleName().'_'.ModuleService::getCurrentVersionName());
-
-/**
  * Load environment config
  */
 $env_config = __DIR__ . '/environments/' . WP_ENV . '.php';

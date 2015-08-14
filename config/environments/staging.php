@@ -10,6 +10,13 @@ define('WP_DEBUG_DISPLAY', false);
 define('SCRIPT_DEBUG', false);
 define('DISALLOW_FILE_MODS', true); // this disables all file modifications including updates and update notifications
 
+
+/**
+ *  Cache
+ */
+ //define('WP_CACHE_KEY_SALT', ModuleService::getCurrentModuleName().'_'.ModuleService::getCurrentVersionName());
+define('WP_CACHE', true);
+
 $batcache = [
   'seconds'=>0,
   'max_age'=>30*60, // 30 minutes

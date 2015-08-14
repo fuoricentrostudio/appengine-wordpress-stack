@@ -14,9 +14,8 @@ define('DISALLOW_FILE_MODS', true); // this disables all file modifications incl
 
 define('WP_POST_REVISIONS', 3);
 
-$batcache = [
-  'seconds'=>0,
-  'max_age'=>60*60*24, // 30 minutes
-  'group'=>'batcache_'. ( defined(WP_CACHE_KEY_SALT) ? WP_CACHE_KEY_SALT : '' ),
-  'debug'=>false
-];
+/**
+ *  Cache
+ */
+ //define('WP_CACHE_KEY_SALT', ModuleService::getCurrentModuleName().'_'.ModuleService::getCurrentVersionName());
+define('WP_CACHE', true);
