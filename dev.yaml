@@ -4,7 +4,6 @@ version: dev
 runtime: php55
 api_version: 1
 instance_class: F1
-threadsafe: true
 automatic_scaling:
   min_idle_instances: 0
   max_idle_instances: 1
@@ -32,3 +31,6 @@ env_variables:
 skip_files:
 - ^(.*/)?\..*$
 - ^(.*/)?\.md$
+
+error_handlers:
+  - file: default_error.html

@@ -29,3 +29,6 @@ env_variables:
 skip_files:
 - ^(.*/)?\..*$
 - ^(.*/)?\.md$
+
+error_handlers:
+  - file: default_error.html
