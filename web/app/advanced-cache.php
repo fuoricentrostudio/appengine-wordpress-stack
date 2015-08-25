@@ -1,6 +1,7 @@
 <?php
 
 namespace FuoricentroStudio\WP\PageCache;
+use google\appengine\api\taskqueue\PushTask;
 
 class Memcacher {
     
@@ -55,7 +56,7 @@ class Memcacher {
             exit;  
             
         } 
-                
+        
         $this->record_output();
     }
     
@@ -63,7 +64,16 @@ class Memcacher {
         
         $data = $this->mc->getMulti($this->keys());
         
-        return empty($data)? false : $data;
+        if(empty($data) || !trim($this->data($data, 'content'))){
+            return false;
+        }
+        
+        return $data;
+    }
+    
+    public function queue(){
+        $task = new PushTask( $this->uri, ['generate_cache' => 1], ['method'=>'GET', 'name'=>uniqid($this->page_key)]);
+        $task_name = $task->add();
     }
     
     public function headers($data){
@@ -181,6 +191,8 @@ class Memcacher {
         
         header('ETag: "'.$this->etag($time).'"');
         header('Last-Modified: '.gmdate(\DateTime::RFC2822, $time));
+        header('Cache-Control: max-age=' . $this->client_expire);
+        
         header('X-Page-Cache: miss');
 
 //        $options = stream_context_create(['gs'=>['acl'=>'public-read','Content-Type' => 'text/html']]);
