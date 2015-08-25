@@ -1,0 +1,576 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 28-mag-2015, 12.03.27
+    Author     : Iacopo
+*/
+
+.masonry-container,
+.content-wrapper.main {
+    zoom: 1;
+}
+
+#filter li {
+    width: 40%;
+    display: inline-block;
+}
+
+button,
+input,
+select,
+textarea {
+    vertical-align: middle;
+}
+
+input[type="checkbox"],
+#filter input[type="checkbox"]{
+    position:relative;
+    clip: auto;
+    display: inline;
+    margin-right: 8px;
+}
+
+input[type="checkbox"]
+input[type="checkbox"]+ label {
+    float: left;
+    display: block;
+}
+
+input[type="checkbox"]+ label:before {
+    content: none;
+
+}
+
+input[type="checkbox"]:checked + label:before {
+    content:none;
+}
+
+body {
+    background: #ccc;
+}
+#page {
+    width: 1040px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#primary-navigation {
+    width: 1040px;
+}
+
+#featured .flickity-prev-next-button {
+    top: 35px;
+}
+
+#manchette-left .responsive-banner,
+#manchette-right .responsive-banner {
+    width: 240px;
+}
+
+#sponsors #manchette-left {
+        display: none;
+    }
+    
+    #manchette-left {
+        display: block;
+    }
+
+
+/*===============================================*/
+
+
+ #featured,
+    #featured .gallery,
+    #featured .gallery-cell,
+    #featured .gallery-cell > a {
+        height: 442px;
+    }
+    
+    .gallery .post-categories,
+    .slide-excerpt {
+        display: inline-block;
+    }
+    
+        .flickity-controls {
+        margin: 0;
+        position: absolute;
+        z-index: 2;
+        top: 40px;
+        left: 0px;
+    }
+    
+    .abstract {
+        margin-bottom: 0;
+    }
+    
+    .abstract h2 {
+        padding-bottom: 0;
+    }
+    
+    #home-portlet-right .textwidget a {
+        padding: 50px 40px 50px 20px;
+        box-sizing: border-box;
+    }
+    
+    #home-portlet-right .textwidget a.link-to-livestream {
+        margin-top: 50px;
+    }
+
+    /*------------------------- Struttura generale ---------------------------*/
+    .masonry-container {
+        margin-right: -2%;
+    }
+    
+    .masonry-container article {
+        float: left;
+        width: 48%;
+        margin-right: 2%;
+    }
+    
+    #filter-comune,
+    #filter-category {
+        display: table-cell;
+        vertical-align: top;
+        width: 50%;
+        padding: 10px 0 0;
+    }
+
+    #filter-category {
+        padding-right: 25px;
+        border-right: 1px solid #5d6368;
+        border-bottom: none;
+    }
+
+    #filter-comune {
+        padding-left: 25px;
+    }
+    
+    /*-------------------------------- Form --------------------------------*/
+    .wpcf7 form {
+        margin-right: -3%;
+    }
+    
+    .wpcf7 form p {
+        width: 47%;
+        float: left;
+        margin-right: 3%;
+    }
+    
+    .wpcf7 form p.textarea,
+    .wpcf7 form p.capcha,
+    .wpcf7 form p.acceptance {
+        float: none;
+        width: 97%;
+    }
+
+    .capcha input {
+        width: 50%;
+    }
+    
+    .capcha:after {
+        left: 50%;
+    }
+    
+    .search-box {
+        font-size: 23px;
+        width: 500px;
+    }
+    
+    input[type="search"] {
+        width: 300px;
+    }
+    
+    /*-------------------------------- Header --------------------------------*/
+    h1.site-title {
+        display: inline-block;
+    }
+
+    #manchette-left {
+        float: left;
+        clear: left;
+    }
+
+    #manchette-right {
+        float: right;
+        display: block;
+    }
+    
+    #friend-sites .responsive-banner.fc-banner-size-1x1 {
+        width: 20%;
+    }
+    
+    .responsive-banner.fc-banner-size-2x2, .responsive-banner.fc-banner-size-2x1 {
+        width: 50%;
+    }
+
+    .responsive-banner.fc-banner-size-1x1 {
+        width: 25%;
+    }
+
+    #primary .responsive-banner.fc-banner-size-1x1 {
+        width: 25%;
+    }
+    
+    #masthead-banner img.banner-size-mastheadmobile {
+        display: none;
+    }
+
+    #masthead-banner img.banner-size-masthead {
+        display: block;
+    }
+    
+    #ultime-curiosita article {
+        float: left;
+        width: 50%;
+        padding-left: 16px;
+        vertical-align: top;
+    }
+    
+    #ultime-curiosita .link-to-archive {
+        margin-left: 16px;
+        left: 35%;
+    }
+    
+    #askthelawyer .band-content .left-content {
+        float: left;
+        width: 50%;
+        padding-right: 28px;
+    }
+    
+    #askthelawyer .band-content .right-content {
+        float: right;
+        width: 50%;
+        padding-left: 28px;
+    }
+    
+    #askthelawyer .band-content .left-content {
+        padding: 24px 28px 0 0px;
+        margin-bottom: 0;
+    }
+    
+    /*-------- Pagine e post --------*/
+
+    .single .entry-date {
+        font-size: 15px;
+        width: 40%;
+        margin-bottom: 6px;
+    }
+
+    .single .entry-header .cat-links {
+        float: right;
+    }
+    
+    .single .entry-date {
+        width: auto;
+    }
+    
+    .yarpp-related article {
+        float: left;
+        width: 33.3%;
+        padding-right: 10px;
+        margin-bottom: 20px;
+    }
+
+    #instagram-timeline .instagram-photos-st a {
+        width: 19%;
+    }
+    
+    .instagram-photos a {
+        width: 20%;
+    }
+
+    /*--------------------------------- Home ---------------------------------*/
+    #home-portlet-right .widget {
+        margin-top: 0px;
+    }
+    
+    .textwidget iframe {
+        position: relative;
+        visibility: visible;
+        left: auto;
+    }
+
+    .textwidget a.link-to-livestream,
+    #home-portlet-right .textwidget a.link-to-livestream {
+        display: none;
+    }
+    
+    #home-portlet-right .textwidget a,
+    .textwidget a.link-to-livestream {
+        padding: 32px 40px 31px 20px;
+    }
+    
+    #home-portlet-right {
+        display: table-cell;
+        width: 32%;
+        padding-left: 16px;
+        vertical-align: top;
+    }
+    
+    #home-portlet-right .textwidget a.link-to-livestream {
+        margin-top: 0;
+    }
+
+    .post-type-archive-askthelawyer #content,
+    .has-sidebar #content {
+        max-width: 1040px;
+        padding: 0 16px;
+        margin: 0 auto;
+    }
+    
+    .post-type-archive-askthelawyer #primary,
+    .has-sidebar #primary {
+        float: left;
+        width: 68%;
+        padding-right: 32px;
+        border-right: 1px solid #eff0f0;
+    }
+    
+    #secondary {
+        float: left;
+        width: 32%;
+        border-top: none;
+        border-left: 1px solid #eff0f0;
+        margin-left: -1px;
+    }
+    
+    #secondary .widget {
+        padding: 20px 0 20px 20px;
+    }
+
+    #sponsored-by {
+        padding: 40px 0 40px;
+    }
+
+    .single.has-sidebar .author-info,
+    .has-sidebar #sponsored-by {
+        margin-right: -32px;
+    }
+    
+    .has-sidebar #sponsored-by {
+        padding-right: 10px;
+    }
+    
+    .yarpp-related {
+        margin-right: -26px;
+        margin-left: -16px;
+    }
+
+    
+    .masonry-container article {
+        float: left;
+        width: 22%;
+        margin-right: 2%;
+    }
+
+    body #cookieChoiceInfo {
+        padding: 30px;
+    }
+
+    h1.site-title a {
+        width: 475px;
+        height: 96px;
+    }
+    
+    /*------------------------------ Navigation ------------------------------*/
+    
+    #primary-navigation ul {        
+        text-align: left;
+        display: inline-block;
+    }
+    
+    #primary-navigation li {
+        display: inline-block;
+        margin: 0 8px;
+        font-size: 12px;
+    }
+    
+    /*-------------------------------- Header --------------------------------*/
+    .site-branding {
+        margin-top: 40px;
+    }
+    
+    .banner-size-manchettewide,
+    .banner-size-manchette {
+        display: block;
+    }
+    
+    .banner-size-sottile {
+        display: none;
+    }
+ 
+    /*---------------------------  Home ed Archive ---------------------------*/
+    #spotlight .band-content {
+        display: table;
+        width: 100%;
+    }
+    #spotlight #featured {
+        display: table-cell;
+        width: 68%;
+        vertical-align: top;
+    }
+    
+    /*-------- Last News --------*/
+    #last-news {
+        display: table;
+        width: 100%;
+        padding: 0 8px;
+    }
+    
+    #last-news .band-content {
+        padding: 0 8px;
+    }
+    
+    .column {
+        display: table-cell;
+        width: 25%;
+        border-right: 1px solid #ccc;
+        vertical-align: top;
+        padding: 16px 8px 0;
+    }
+    
+    .column:last-of-type {
+        border-right: none;
+    }
+    
+    /*-------- Editoriale --------*/
+    #tertiary .band-content {
+        display: table;
+        width: 100%;
+        position: relative;
+    }
+    
+    #tertiary .band-content > section {
+        display: table-cell;
+        vertical-align: top;
+        padding-bottom: 30px;
+    }
+    
+    #editoriale {
+        width: 35%;
+        padding: 10px 20px 10px 0px;
+        border-bottom: none;
+        border-right: 1px solid #e3e3e3;
+        margin-bottom: 0;
+    }
+    
+    #ultime-curiosita {
+        width: 65%;
+        padding: 10px 0 10px 4px;
+    }
+    
+    #tertiary .band-content > section a.link-to-archive {
+        position: absolute;
+        bottom: 16px;
+    }
+    
+    /*-------- Social STREAM --------*/
+    #stream-social .float-wrapper {
+        margin-right: -5%;
+    }
+    
+    #stream-social aside {
+        float: left;
+        width: 28.3%;
+        margin-right: 5%;
+    }
+    
+    #facebook-timeline {
+        max-height: 366px;
+    }
+    
+     #stream-social .float-wrapper {
+        display: block;
+    }
+
+    .mobile-social-link {
+        display: none;
+    }
+    
+    /*-------- Avvocato --------*/
+    
+    #askthelawyer .band-content .left-content {
+        background: url(images/bg_avvocato.jpg) no-repeat left top;
+        padding: 24px 28px 0 150px;
+        margin-bottom: 0;
+    }
+    
+    /*-------- Meteo - sposa --------*/
+    #widget-footer {
+        display: table;
+        width: 100%;
+    }
+    
+    #widget-footer .widget {
+        display: table-cell;
+        width: 35%;
+    }
+    
+    #widget-footer .widget.widget_biometeo {
+        width: 65%;
+        padding-right: 30px;
+        padding-bottom: 20px;
+    }
+    
+    /*-------- Sponsor Responsive banner --------*/
+    .responsive-banner.fc-banner-size-4x1 {
+        width: 100%;
+    }
+
+    .responsive-banner.fc-banner-size-2x2, .responsive-banner.fc-banner-size-2x1 {
+        width: 50%;
+    }
+
+    .responsive-banner.fc-banner-size-1x1 {
+        width: 25%;
+    }
+
+    #primary .responsive-banner.fc-banner-size-1x1 {
+        width: 33%;
+    }
+
+    .responsive-banner.fc-banner-size-manchette img {
+        width: 100%;
+    }
+    
+    /*------------------------------ Footer ----------------------------------*/
+    #colophon {
+        text-align: left;
+    }
+    
+    .site-info {
+        width: 100%;
+        padding: 0px 16px;
+    }
+    
+    .site-info > div {
+        float: left;
+        width: 38%;
+        vertical-align: top;
+    }
+    
+    #social {
+        float: right;
+        width: 23%;
+        text-align: center;
+    }
+    
+    .menu-footer-menu-container {
+        float: left;
+        width: 50%;
+    }
+    
+    #credits {
+        float: right;
+    }
+
+    #instagram-timeline .instagram-photos-st a {
+        width: 32.33%;
+    }
+    
+    .instagram-photos a {
+        width: 33.33%;
+    }

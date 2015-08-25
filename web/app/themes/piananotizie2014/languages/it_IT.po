@@ -1,0 +1,453 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: PianaNotizie 2014\n"
+"POT-Creation-Date: 2015-06-15 10:12+0100\n"
+"PO-Revision-Date: 2015-06-15 12:14+0100\n"
+"Last-Translator: Iacopo Montagnani <iacopom88@gmail.com>\n"
+"Language-Team: \n"
+"Language: it_IT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.1\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: archive-askthelawyer.php:29
+msgid ""
+"Lo Studio Legale Bini-Passalacqua offre la propria competenza nella gestione "
+"di vertenze giudiziali e stragiudiziali in ambito civile e penale. Tra le "
+"altre vengono trattate pratiche relative a recupero del credito per aziende "
+"e privati, diritto del lavoro, diritto condominiale e delle locazioni, "
+"sfratti, esecuzione forzata, risarcimento del danno, sinistri stradali, "
+"successioni mortis causa, contratti, diritto commerciale e fallimentare, "
+"opposizione a sanzione amministrativa. Lo Studio Legale si trova a Sesto "
+"Fiorentino (FI) in Via A. Gramsci n°399 – <a href=\"www.lexfirenze.it\" "
+"target=\"_blank\">www.lexfirenze.it</a>"
+msgstr ""
+"Lo Studio Legale Bini-Passalacqua offre la propria competenza nella gestione "
+"di vertenze giudiziali e stragiudiziali in ambito civile e penale. Tra le "
+"altre vengono trattate pratiche relative a recupero del credito per aziende "
+"e privati, diritto del lavoro, diritto condominiale e delle locazioni, "
+"sfratti, esecuzione forzata, risarcimento del danno, sinistri stradali, "
+"successioni mortis causa, contratti, diritto commerciale e fallimentare, "
+"opposizione a sanzione amministrativa. Lo Studio Legale si trova a Sesto "
+"Fiorentino (FI) in Via A. Gramsci n°399 – <a href=“www.lexfirenze.it” "
+"target=“_blank”>www.lexfirenze.it</a>"
+
+#: archive-askthelawyer.php:42
+msgid "Fill the form and send us your request"
+msgstr "Compila il form e inviaci la tua richiesta"
+
+#: archive-askthelawyer.php:43
+msgid ""
+"You have a question about a legal matter? Then ask the lawyer! Send an email "
+"to <a href=\"mailto:chiedi.avvocato@gmail.com\" >chiedi.avvocato@gmail.com</"
+"a> or fill out the form and we will respond lawyers Bini and Passalacqua‏"
+msgstr ""
+"Hai un dubbio su una questione legale? Allora chiedilo all'avvocato! Manda "
+"una mail a <a href=\"mailto:chiedi.avvocato@gmail.com\" >chiedi."
+"avvocato@gmail.com</a> o compila il form e ti risponderanno gli avvocati "
+"Bini e Passalacqua"
+
+#: archive-askthelawyer.php:50 inc/askthelawyer.php:76
+msgid "Your last question"
+msgstr "La tua ultima domanda"
+
+#: archive-askthelawyer.php:66 archive.php:51 home.php:51 search.php:40
+msgid "Previous page"
+msgstr "Pagina precedente"
+
+#: archive-askthelawyer.php:67 archive.php:52 home.php:52 search.php:41
+msgid "Next page"
+msgstr "Prossima pagina"
+
+#: archive-askthelawyer.php:68 archive.php:53 content-askthelawyer.php:56
+#: content.php:50 home.php:53 search.php:42
+msgid "Page"
+msgstr "Pagina"
+
+#: archive.php:58 home.php:58 search.php:47
+msgid "Load More Articles"
+msgstr "Carica altri articoli"
+
+#: content-askthelawyer.php:27
+#, php-format
+msgid "Inviato da %s"
+msgstr "Send by %s"
+
+#: content-askthelawyer.php:34
+msgid "Question"
+msgstr "Domanda"
+
+#: content-askthelawyer.php:38 functions.php:336
+#, php-format
+msgid "Continue reading %s"
+msgstr "Continua a leggere %s"
+
+#: content-askthelawyer.php:43
+msgid "Answer"
+msgstr "Risposta"
+
+#: content-askthelawyer.php:52 content.php:46
+msgid "Pages:"
+msgstr "Pagine:"
+
+#: content-askthelawyer.php:64 content.php:74
+msgid "Edit"
+msgstr "Modifica"
+
+#: content-none.php:15
+msgid "Nothing Found"
+msgstr "Nessun risultato"
+
+#: content-none.php:22
+#, php-format
+msgid ""
+"Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr ""
+"Pronto a pubblicare il tuo primo articolo? <a href=\"%1$s\">Inizia qui</a>."
+
+#: content-none.php:26
+msgid ""
+"Sorry, but nothing matched your search terms. Please try again with some "
+"different keywords."
+msgstr ""
+"Non è stata trovata una corrispondenza con il tuo termine di ricerca. Per "
+"piacere prova di nuovo con un termine di ricerca diverso."
+
+#: content-none.php:30
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+
+#: content.php:24
+#, php-format
+msgid "Post %1$s at %2$s"
+msgstr "Pubblicato il %1$s alle %2$s"
+
+#: content.php:58
+msgctxt "Used between list items, there is a space after the comma."
+msgid ", "
+msgstr ", "
+
+#: content.php:61
+msgctxt "Used before tag names."
+msgid "Tags"
+msgstr "Tags"
+
+#: content.php:68
+msgid "Author"
+msgstr "Autore"
+
+#: footer.php:19
+msgid "Reclame"
+msgstr "Pubblicità"
+
+#: footer.php:49 footer.php:72
+msgid "Continue reading"
+msgstr "Continua a leggere"
+
+#: footer.php:53
+msgid "Read all editorials"
+msgstr "Leggi tutti gli editoriali"
+
+#: footer.php:76
+msgid "Read all articles"
+msgstr "Leggi tutti gli articoli"
+
+#: footer.php:86
+msgid "Piananotizie 2.0"
+msgstr "Piananotizie 2.0"
+
+#: footer.php:90
+msgid "Twitter updates"
+msgstr "Twitter updates"
+
+#: footer.php:91
+msgid "Loading..."
+msgstr "Caricamento…"
+
+#: footer.php:92
+msgid "Piananotizie"
+msgstr "Piananotizie"
+
+#: footer.php:97
+msgid "Facebook"
+msgstr "Facebook"
+
+#: footer.php:105
+msgid "Instagram"
+msgstr "Instagram"
+
+#: footer.php:153 inc/askthelawyer.php:54
+msgid "Ask the lawyer"
+msgstr "Chiedilo all’avvocato"
+
+#: footer.php:156
+msgid "Hai un dubbio su una questione legale? Allora chiedilo all'avvocato!"
+msgstr "Hai un dubbio su una questione legale? Allora chiedilo all’avvocato!"
+
+#: footer.php:157
+msgid "Send an email to "
+msgstr "Invia un’email a "
+
+#: footer.php:157
+msgid "e ti risponderanno gli avvocati Bini e Passalacqua."
+msgstr "e ti risponderanno gli avvocati Bini e Passalacqua."
+
+#: footer.php:159
+msgid "Send your answer"
+msgstr "Invia la tua risposta"
+
+#: footer.php:162
+msgid "Yours last questions"
+msgstr "Le vostre ultime domande"
+
+#: footer.php:168
+msgid "View the questions"
+msgstr "Vedi le domande"
+
+#: front-page.php:104
+msgid "Last news"
+msgstr "Ultimi articoli"
+
+#: front-page.php:108
+msgid "View complete archive"
+msgstr "Vai all&apos;archivio completo"
+
+#: front-page.php:129
+msgid "Read all news"
+msgstr "Leggi tutte le news"
+
+#: functions.php:10
+msgctxt "piananotizie"
+msgid "Comuni"
+msgstr "Comuni"
+
+#: functions.php:11
+msgctxt "piananotizie"
+msgid "Comune"
+msgstr "Comune"
+
+#: functions.php:12
+msgid "Search in comuni"
+msgstr "Cerca in comuni"
+
+#: functions.php:13
+msgid "All comuni"
+msgstr "Tutti i comuni"
+
+#: functions.php:14
+msgid "Parents"
+msgstr "Parents"
+
+#: functions.php:15
+msgid "Parents:"
+msgstr "Parents:"
+
+#: functions.php:16
+msgid "Edit Comuni"
+msgstr "Modifica Comuni"
+
+#: functions.php:17
+msgid "Update Comune"
+msgstr "Aggiorna Comune"
+
+#: functions.php:18
+msgid "Add New Comune"
+msgstr "Aggiungi nuovo Comune\t"
+
+#: functions.php:19
+msgid "New name comune"
+msgstr "Nuovo nome comune"
+
+#: functions.php:20
+msgid "Comuni"
+msgstr "Comuni"
+
+#: functions.php:114
+msgid "Masthead"
+msgstr "Masthead"
+
+#: functions.php:116
+msgid "I contenuti vengono mostrati sopra il menu"
+msgstr "I contenuti vengono mostrati sopra il menu"
+
+#: functions.php:124
+msgid "Manchette Left"
+msgstr "Manchette left"
+
+#: functions.php:126
+msgid "Contents are shown in the manchette"
+msgstr "I contenuti vengono mostrati nelle manchette"
+
+#: functions.php:134
+msgid "Manchette Right"
+msgstr "Manchette destra"
+
+#: functions.php:136
+msgid "Contents are shown in the right manchette"
+msgstr "I contenuti vengono mostrati nelle manchette di destra"
+
+#: functions.php:144
+msgid "Portlet lato destra"
+msgstr "Portlet lato destra"
+
+#: functions.php:146
+msgid "Contents are shown in home near the slider"
+msgstr "I contenuti vengono mostrati nella home accanto allo slider"
+
+#: functions.php:154
+msgid "Sponsor of the day"
+msgstr "Sponsor del giorno"
+
+#: functions.php:158
+msgid "Place a picture that will be shown at the end of every page"
+msgstr "Inserire l’immagine che verrà mostrata in fondo ad ogni pagina"
+
+#: functions.php:164
+msgid "Sponsor Footer"
+msgstr "Sponsor Footer"
+
+#: functions.php:166
+msgid "Enter in this area the logos of sponsors through Widgets <Image>"
+msgstr ""
+"Inserire in questa area i loghi degli sponsor tramite il Widget <Image>"
+
+#: functions.php:172
+msgid "Social"
+msgstr "Social"
+
+#: functions.php:174 functions.php:184
+msgid "Insert the image that will be displayed at the bottom of the footer"
+msgstr "Inserire l'immagine che verrà mostrata in fondo al footer"
+
+#: functions.php:182
+msgid "Siti amici"
+msgstr "Siti amici"
+
+#: functions.php:192
+msgid "Widget Footer"
+msgstr "Widget Footer"
+
+#: functions.php:194
+msgid "Bottom page Area"
+msgstr "Area in fondo alla pagina"
+
+#: functions.php:210
+msgid "Home"
+msgstr "Home"
+
+#: functions.php:318
+msgid "Footer links"
+msgstr "Footer links"
+
+#: functions.php:378
+msgid "Read article"
+msgstr "Leggi l’articolo"
+
+#: functions.php:386
+msgid "Share on social"
+msgstr "Condividi sui social"
+
+#: header.php:30
+msgid "Menu"
+msgstr "Menu"
+
+#: header.php:36
+msgid "Search"
+msgstr "Cerca"
+
+#: header.php:40
+msgid "Skip to content"
+msgstr "Vai al contentuto"
+
+#: home.php:19
+msgid "Advanced search"
+msgstr "Ricerca avanzata"
+
+#: home.php:30
+msgid "News"
+msgstr "Articoli"
+
+#: inc/askthelawyer.php:55
+msgid "Show widget ask the lawyer"
+msgstr "Mostra il widget chiedilo all’avvocato"
+
+#: inc/askthelawyer.php:75
+msgid "Send us your question"
+msgstr "Inviaci la tua domanda"
+
+#: inc/askthelawyer.php:81
+msgid "View all questions"
+msgstr "Vedi tutte le domande"
+
+#: inc/askthelawyer.php:98
+msgid "New title"
+msgstr "Nuovo titolo"
+
+#: inc/askthelawyer.php:108
+msgid "Title:"
+msgstr "Titolo"
+
+#: inc/askthelawyer.php:110
+msgid "Description:"
+msgstr "Descrizione:"
+
+#: inc/askthelawyer.php:172
+msgid "Question author"
+msgstr "Autore della domanda"
+
+#: search.php:18
+#, php-format
+msgid "Search Results for: %s"
+msgstr "Risultati ricerca per: %s"
+
+#: searchform.php:3 searchform.php:4
+msgctxt "label"
+msgid "Search for:"
+msgstr "Cerca"
+
+#: searchform.php:4
+msgctxt "placeholder"
+msgid "Start here your search"
+msgstr "Inizia qui la tua ricerca"
+
+#: yarpp-template-thumbnail.php:6
+msgid "Related Post"
+msgstr "Articoli correlati"
+
+#: yarpp-template-thumbnail.php:26
+msgid "No related Post."
+msgstr "Nessun articolo correlato."
+
+#. Theme Name of the plugin/theme
+msgid "PianaNotizie 2014"
+msgstr "PianaNotizie 2014"
+
+#. Theme URI of the plugin/theme
+msgid "https://wordpress.org/themes/twentyfourteen/"
+msgstr "https://wordpress.org/themes/twentyfourteen/"
+
+#. Author of the plugin/theme
+msgid "Fuoricentro Studio"
+msgstr "Fuoricentro Studio"
+
+#. Author URI of the plugin/theme
+msgid "http://www.fuoricentrostudio.com/"
+msgstr "http://www.fuoricentrostudio.com/"
+
+#~ msgctxt "placeholder"
+#~ msgid "Start here your search &hellip;"
+#~ msgstr "Inizia qui la tua ricerca &hellip;"
